@@ -12,6 +12,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mbbill/undotree'
 Plugin 'mattdbridges/bufkill.vim'
 Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
+Plugin 'Yggdroot/indentLine'
 " Todo, check if EditorConfig core is installed
 Plugin 'editorconfig/editorconfig-vim'
 if v:version >= 740
@@ -41,6 +42,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wting/rust.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 
 " Re-enable filetype

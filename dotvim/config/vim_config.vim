@@ -15,7 +15,8 @@ set wildmenu		" Better command completion
 set laststatus=2	" Always display status line
 set cc=80			" Show 80 character bar
 " Show invisible characters
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=eol:$,tab:>\ ,trail:~,extends:>,precedes:<
+highlight SpecialKey guifg=#4a4a59
 set list
 
 " Behavior
@@ -37,7 +38,7 @@ set ts=4						" 4 spaces per tab
 set sw=4						" Reindent operation fix
 " set noexpandtab					" Don't expand tab by default (stupid 42)
 set autoindent					" Smart indentation
-
+let g:indentLine_char = 'c'
 " Folding
 set foldmethod=syntax
 set foldcolumn=1
@@ -57,3 +58,4 @@ let asmsyntax="nasm"
 
 " Space Leader !
 let mapleader = "\<Space>"
+let g:ctrlp_working_path_mode = 'c'

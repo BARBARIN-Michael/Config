@@ -2,6 +2,10 @@
 set background=dark
 colorscheme base16-monokai
 
+
+" Vim
+let g:indentLine_char = '.'
+
 " Airline, the status line of awesome
 " set guifont=Powerline_Consolas:h14:cANSI
 let g:airline_theme='base16'
@@ -50,3 +54,26 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+"set expandtab
+"set list lcs=tab:\.\ 
+"set formatlistpat=^\\s*\\(\\d\\+[\\]:.)}\\t\ ]\\|-\\)\\s*
+set autoindent
+"set smartindent
+"set noexpandtab
+"set copyindent
+"set preserveindent
+"set softtabstop=0
+"set shiftwidth=4
+"set tabstop=4
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+	exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+	exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('o', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('h', 'green', 'none', 'green', '#151515')
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
