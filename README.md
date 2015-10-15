@@ -45,6 +45,7 @@ The following keybindings are defined here :
 - Normal mode
   - `<Leader>o`: Open a new file using the Ctrl-P plugin. An option get file only repertory directory.
   - `<Leader>v`: Open a new split window.
-  - `<C>v`: Open a new split window.
+  - `<S-RIGHT>`, `<S-LEFT>`, `<S-UP>`, `<S-DOWN>`: Move buf right and left, create new buffer, close select buffer.
+  - `<C-RIGHT>`, `<C-LEFT>`, `<C-UP>`, `<C-DOWN>`: Move tab right and left, create new tab, close select tab.
   - `<Leader>n`: Open a NERDTree window..
 
