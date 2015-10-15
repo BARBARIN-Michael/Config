@@ -48,4 +48,5 @@ The following keybindings are defined here :
   - `<S-RIGHT>`, `<S-LEFT>`, `<S-UP>`, `<S-DOWN>`: Move buf right and left, create new buffer, close select buffer.
   - `<C-RIGHT>`, `<C-LEFT>`, `<C-UP>`, `<C-DOWN>`: Move tab right and left, create new tab, close select tab.
   - `<Leader>n`: Open a NERDTree window..
+  - `<C-N>`: With selection, target same selection for multiple cursor modification.
 
