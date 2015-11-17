@@ -15,7 +15,7 @@ git clone --recursive https://github.com/mbarbari/Config /tmp/ConfigToInstall
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp /tmp/ConfigToInstall/conf_base/myzshrc $HOME/.myzshrc
 cp /tmp/ConfigToInstall/conf_base/zshrc $HOME/.zshrc
-cp /tmp/ConfigToInstall/conf_base/mbarbari.zsh-theme $HOME/.oh-my-zsh/theme
+cp /tmp/ConfigToInstall/conf_base/mbarbari.zsh-theme $HOME/.oh-my-zsh/themes
 source $HOME/.zshrc
 ```
 
