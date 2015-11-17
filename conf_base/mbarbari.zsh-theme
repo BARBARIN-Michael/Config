@@ -81,4 +81,4 @@ $(prompt_char) '
 # ----------------------------------------------------------------------------
 # rubies are red, and so my Ruby version is too
 #----------------------------------------------------------------------------
-RPROMPT='%{$fg[red]%}$(rbenv version-name)%{$reset_color%}%'
+RPROMPT='%{$fg[red]%}%{$reset_color%}%'
