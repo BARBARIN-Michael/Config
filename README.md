@@ -10,9 +10,9 @@ ln -s $HOME/.vim/vimrc $HOME/.vimrc
 ## Install zsh and oh-my-zshrc
 ```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-ln -s $HOME/.vim/tmp/myzshrc $HOME/.myzshrc
-ln -s $HOME/.vim/tmp/zshrc $HOME/.zshrc
-cp $HOME/.vim/tmp/mbarbari.zsh-theme $HOME/.oh-my-zsh/themes
+ln -s $HOME/.vim/zsh/myzshrc $HOME/.myzshrc
+ln -s $HOME/.vim/zsh/zshrc $HOME/.zshrc
+cp $HOME/.vim/zsh/mbarbari.zsh-theme $HOME/.oh-my-zsh/themes
 source $HOME/.zshrc
 ```
 
