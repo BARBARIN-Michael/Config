@@ -25,9 +25,7 @@ Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 
 " 42
-if !filereadable("/usr/share/vim/vim73/plugin/stdheader.vim")
-	Plugin 'roblabla/42vim'
-endif
+Plugin 'roblabla/42vim'
 
 " Misc
 Plugin 'scrooloose/syntastic' " Todo : Needs configuration

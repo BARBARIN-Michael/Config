@@ -51,18 +51,17 @@ function! s:CreateKeybindings()
 		nnoremap <Leader>o :CtrlP<CR>
 	endif
 endfunction
-let g:ctrlp_working_path_mode = 'c'
 "nnoremap <C-LEFT> :bn<CR>
 "
-map <S-RIGHT> :bn<CR>⌇
-map <S-LEFT> :bp<CR>⌇
-map <S-UP> :buffers<CR>⌇
-map <S-DOWN> :Bclose<CR>
+map <S-L> :bn<CR>⌇
+map <S-H> :bp<CR>⌇
+map <S-K> :buffers<CR>⌇
+map <S-J> :Bclose<CR>
 
 
-nmap <C-RIGHT> :tabnext<CR>⌇
-nmap <C-LEFT> :tabprevious<CR>⌇
-nmap <C-UP> :tabnew<CR>⌇
-nmap <C-DOWN> :tabclose<CR>
+nmap <C-L> :tabnext<CR>⌇
+nmap <C-H> :tabprevious<CR>⌇
+nmap <C-K> :tabnew<CR>⌇
+nmap <C-J> :tabclose<CR>
 
 nnoremap <Leader>n :NERDTreeToggle<CR>

@@ -58,4 +58,4 @@ let asmsyntax="nasm"
 
 " Space Leader !
 let mapleader = "\<Space>"
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 'ra'
