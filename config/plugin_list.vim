@@ -10,7 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mbbill/undotree'
-Plugin 'mattdbridges/bufkill.vim'
+Plugin 'vim-scripts/bufkill.vim'
 Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
 Plugin 'Yggdroot/indentLine'
 " Todo, check if EditorConfig core is installed
@@ -25,21 +25,22 @@ Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 
 " 42
-Plugin 'roblabla/42vim'
+"Plugin 'roblabla/42vim'
 
 " Misc
-Plugin 'scrooloose/syntastic' " Todo : Needs configuration
+Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'myusuf3/numbers.vim'
 
 " Language plugins
-Plugin 'kchmck/vim-coffee-script'
+"Plugin 'kchmck/vim-coffee-script'
 " Plugin 'jelera/vim-javascript-syntax'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'wting/rust.vim'
-Plugin 'othree/yajs.vim'
+"Plugin 'wting/rust.vim'
+"Plugin 'othree/yajs.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 call vundle#end()

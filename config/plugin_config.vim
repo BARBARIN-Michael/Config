@@ -77,3 +77,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o     " MacOSX/Linux
