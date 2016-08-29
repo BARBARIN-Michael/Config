@@ -1,10 +1,10 @@
 nnoremap <Leader>v :vsp<CR>
 nnoremap <silent> <Leader>p :call <SID>ToggleCopyPasteMode()<CR>
 
-nnoremap <silent> <Leader>l :call <SID>ToggleNumberMode()<CR>
-
-function! s:ToggleNumberMode()
-	if &number
+function! s:ToggleCopyPasteMode()
+	if &list
+		set nolist
+		set paste
 		set nonumber
 		set norelativenumber
 		set foldcolumn=0
@@ -13,32 +13,14 @@ function! s:ToggleNumberMode()
 		endif
 		set mouse=
 	else
+		set list
+		set nopaste
 		set number
 		set relativenumber
 		set foldcolumn=1
 		if exists(":NumbersEnable")
 			:NumbersEnable
 		endif
-		set mouse=a
-	endif
-endfunction
-
-function! s:ToggleCopyPasteMode()
-	if &list
-		set nolist
-		set paste
-		if &number
-			set nonumber
-			set norelativenumber
-			set foldcolumn=0
-			if exists(":NumbersDisable")
-				:NumbersDisable
-			endif
-		endif
-		set mouse=
-	else
-		set list
-		set nopaste
 		set mouse=a
 	endif
 endfunction
@@ -51,8 +33,7 @@ function! s:CreateKeybindings()
 		nnoremap <Leader>o :CtrlP<CR>
 	endif
 endfunction
-"nnoremap <C-LEFT> :bn<CR>
-"
+
 map <S-L> :bn<CR>⌇
 map <S-H> :bp<CR>⌇
 map <S-K> :buffers<CR>⌇

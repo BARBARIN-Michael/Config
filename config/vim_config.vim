@@ -1,3 +1,15 @@
+" **************************************************************************** "
+"                                                                              "
+"                                                         :::      ::::::::    "
+"    vim_config.vim                                     :+:      :+:    :+:    "
+"                                                     +:+ +:+         +:+      "
+"    By: roblabla </var/spool/mail/roblabla>        +#+  +:+       +#+         "
+"                                                 +#+#+#+#+#+   +#+            "
+"    Created: 2015/06/12 16:53:14 by roblabla          #+#    #+#              "
+"    Updated: 2016/08/23 21:25:38 by barbare          ###   ########.fr        "
+"                                                                              "
+" **************************************************************************** "
+
 " Screw vim compatibility
 set nocompatible
 
@@ -6,7 +18,7 @@ filetype plugin indent on
 syntax on
 
 " Some presentational settings
-set number			" Numbers list
+"set number			" Numbers list
 set showcmd			" Show current command bottom right
 set showmatch		" Show matching brackets
 set ruler			" Show current char in bottom right
@@ -15,8 +27,7 @@ set wildmenu		" Better command completion
 set laststatus=2	" Always display status line
 set cc=80			" Show 80 character bar
 " Show invisible characters
-set listchars=eol:$,tab:>\ ,trail:~,extends:>,precedes:<
-highlight SpecialKey guifg=#4a4a59
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
 
 " Behavior
@@ -38,7 +49,7 @@ set ts=4						" 4 spaces per tab
 set sw=4						" Reindent operation fix
 " set noexpandtab					" Don't expand tab by default (stupid 42)
 set autoindent					" Smart indentation
-let g:indentLine_char = 'c'
+
 " Folding
 set foldmethod=syntax
 set foldcolumn=1
@@ -48,14 +59,19 @@ set foldlevelstart=20
 set encoding=utf8
 
 " Language config
-autocmd FileType c set noexpandtab shiftwidth=4 softtabstop=4
-autocmd FileType coffee set expandtab shiftwidth=2 softtabstop=2
-autocmd FileType html set expandtab shiftwidth=2 softtabstop=2
-autocmd FileType javascript set expandtab shiftwidth=2 softtabstop=2
-autocmd FileType jade set expandtab shiftwidth=2 softtabstop=2
-autocmd FileType json set expandtab shiftwidth=2 softtabstop=2
+autocmd FileType c setl noexpandtab shiftwidth=4 softtabstop=4
+autocmd FileType coffee setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType html setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType hbs setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType javascript setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType jade setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType json setl expandtab shiftwidth=2 softtabstop=2
+if has("nvim")
+	autocmd TermOpen * setl nolist
+endif
 let asmsyntax="nasm"
 
 " Space Leader !
 let mapleader = "\<Space>"
-let g:ctrlp_working_path_mode = 'ra'
+
+autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx

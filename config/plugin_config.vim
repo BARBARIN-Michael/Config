@@ -2,13 +2,9 @@
 set background=dark
 colorscheme base16-monokai
 
-
-" Vim
-let g:indentLine_char = '.'
-
 " Airline, the status line of awesome
 " set guifont=Powerline_Consolas:h14:cANSI
-let g:airline_theme='base16'
+"let g:airline_theme='base16'
 " let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -49,32 +45,75 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-Wall -Wextra -Werror'
 let g:syntastic_coffee_checkers = ['coffee', 'coffeelint']
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ocaml_checkers = ['merlin']
+
+" Merlin
+let $PATH .= ':' . $HOME . '/.vim/bundle/merlin'
+
+" Slime
+let g:slime_target = "tmux"
+
 " Rainbow Parentheses auto-enable
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-"set expandtab
-"set list lcs=tab:\.\ 
-"set formatlistpat=^\\s*\\(\\d\\+[\\]:.)}\\t\ ]\\|-\\)\\s*
-set autoindent
-"set smartindent
-"set noexpandtab
-"set copyindent
-"set preserveindent
-"set softtabstop=0
-"set shiftwidth=4
-"set tabstop=4
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
-	exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
-	exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
+"Remove black in rainbow parentheses
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
 
-call NERDTreeHighlightFile('o', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('h', 'green', 'none', 'green', '#151515')
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o     " MacOSX/Linux
+" Neocomplete
+" let g:acp_enableAtStartup = 0
+" let g:neocomplete#enable_at_startup = 1
+" Smart case
+let g:neocomplete#enable_smart_case = 1
+
+" Minimum 3 letters
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" <TAB>: completion, also Ultisnip
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+" let g:UltiSnipsExpandTrigger = '<f5>'
+
+" CtrlP
+let g:ctrlp_custom_ignore = 'node_modules'
+
+" Neomake
+let g:neomake_error_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'ErrorMsg',
+            \ }
+hi MyWarningMsg ctermbg=3 ctermfg=0
+let g:neomake_warning_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'MyWarningMsg',
+            \ }
+
+" stdheader
+let g:stdheader_user = "roblabla"
+let g:stdheader_mail = "rlambert@student.42.fr"
+
+" multicursors
+let g:multi_cursor_exit_from_insert_mode = 0
+
