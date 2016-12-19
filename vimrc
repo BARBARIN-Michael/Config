@@ -18,3 +18,4 @@ if has("win32")
 endif
 source $HOME/.vim/config/plugin_config.vim
 source $HOME/.vim/config/bclose.vim
+"hi Normal ctermbg=none
