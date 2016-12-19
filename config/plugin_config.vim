@@ -1,6 +1,5 @@
-" Colorscheme
 set background=dark
-colorscheme base16-monokai
+colorscheme base16-spacemacs
 
 
 " Vim
@@ -8,7 +7,7 @@ let g:indentLine_char = '.'
 
 " Airline, the status line of awesome
 " set guifont=Powerline_Consolas:h14:cANSI
-let g:airline_theme='base16'
+"let g:airline_theme='base16'
 " let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1

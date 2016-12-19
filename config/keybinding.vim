@@ -13,8 +13,8 @@ function! s:ToggleNumberMode()
 		endif
 		set mouse=
 	else
-		set number
-		set relativenumber
+		set nonumber
+		set norelativenumber
 		set foldcolumn=1
 		if exists(":NumbersEnable")
 			:NumbersEnable

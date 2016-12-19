@@ -6,7 +6,7 @@ filetype plugin indent on
 syntax on
 
 " Some presentational settings
-set number			" Numbers list
+set nonumber		" Numbers list
 set showcmd			" Show current command bottom right
 set showmatch		" Show matching brackets
 set ruler			" Show current char in bottom right
@@ -15,7 +15,7 @@ set wildmenu		" Better command completion
 set laststatus=2	" Always display status line
 set cc=80			" Show 80 character bar
 " Show invisible characters
-set listchars=eol:$,tab:>\ ,trail:~,extends:>,precedes:<
+set listchars=eol:$,tab:\ \ ,trail:~,extends:>,precedes:<
 highlight SpecialKey guifg=#4a4a59
 set list
 

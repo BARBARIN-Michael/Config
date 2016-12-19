@@ -30,7 +30,7 @@ Plugin 'chriskempson/base16-vim'
 " Misc
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'myusuf3/numbers.vim'
+"Plugin 'myusuf3/numbers.vim'
 
 " Language plugins
 "Plugin 'kchmck/vim-coffee-script'
