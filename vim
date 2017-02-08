@@ -1,0 +1,1 @@
+/home/barbare/.vim/vim

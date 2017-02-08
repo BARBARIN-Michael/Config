@@ -1,6 +1,5 @@
 set background=dark
-colorscheme base16-spacemacs
-
+colorscheme spacedust-theme
 
 " Vim
 let g:indentLine_char = '.'
